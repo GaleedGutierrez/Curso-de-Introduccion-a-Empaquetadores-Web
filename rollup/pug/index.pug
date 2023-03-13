@@ -1,0 +1,13 @@
+extend ./components/global/_global.pug
+block head
+	- const SEE_HEADER = true
+	- const SEE_FOOTER = true
+	+style-head("style.css")
+	//- +style-head-responsive("homepage/tablet.css", "800")
+	//- +style-head-responsive("desktop.css", "800")
+	+titles("")
+block main
+	main.main
+block scripts
+	script(async src="https://www.googletagmanager.com/gtag/js?id=G-M8H4YB694S")
+	script(src="../dist/googleAnalytics.js")
