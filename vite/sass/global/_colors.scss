@@ -1,0 +1,51 @@
+// Hexadecimal
+
+
+body {
+	background-color: $purple-light-1;
+	color: $purple-dark-2;
+}
+
+p {
+	color: $purple-dark-2;
+}
+
+a {
+	color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+	color: inherit;
+}
+
+form,
+input,
+textarea,
+select,
+button,
+label {
+	background-color: transparent;
+	color: inherit;
+}
+
+/*
+    Configuramos el texto que seleccionamos
+    * Cambiar variables
+*/
+// ::selection {
+//     background-color: var(--primary-color);
+//     color: var(--secondary-color);
+// }

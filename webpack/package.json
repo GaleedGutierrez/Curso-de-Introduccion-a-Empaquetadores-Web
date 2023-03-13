@@ -1,0 +1,15 @@
+{
+	"name": "webpack",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build-pug": "pug --watch ./pug --out ./public -P"
+	},
+	"author": "Galeed Gutierrez <galeedeveloper@gmail.com>",
+	"license": "MT",
+	"devDependencies": {
+		"webpack": "^5.76.1",
+		"webpack-cli": "^5.0.1"
+	}
+}
