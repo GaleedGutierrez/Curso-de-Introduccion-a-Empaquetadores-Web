@@ -1,8 +1,8 @@
 // font family
-@font-face {
-	font-family: Mona-Sans;
-	src: url("../assets/fonts/Mona-Sans.ttf");
-}
+// @font-face {
+// 	font-family: Mona-Sans;
+// 	src: url("../assets/fonts/Mona-Sans.ttf");
+// }
 
 $primary-generic-font: helvetica, arial, sans-serif;
 $primary-font: "Mona-Sans", $primary-generic-font;
@@ -64,7 +64,7 @@ $primary-font: "Mona-Sans", $primary-generic-font;
 }
 
 @mixin font-caption {
-	font-size: 1.3rem;
+	font-size: 1.4rem;
 	line-height: 2rem;
 	font-weight: 400;
 }
@@ -92,13 +92,13 @@ body {
 // }
 
 h1 {
-	@include font-x-large;
+	@include font-medium;
 
 	font-style: inherit;
 }
 
 h2 {
-	@include font-large;
+	@include font-caption;
 
 	font-style: inherit;
 }
@@ -111,7 +111,7 @@ h3 {
 
 p,
 a {
-	@include font-small;
+	@include font-caption;
 
 	font-style: inherit;
 }

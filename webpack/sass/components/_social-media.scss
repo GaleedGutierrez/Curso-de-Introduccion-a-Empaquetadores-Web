@@ -1,0 +1,52 @@
+.main__social-media-container {
+	padding-block: 2rem;
+	padding-inline: 1.6rem;
+	border-block-start: 0.1rem solid rgba($color: $grey, $alpha: 30%);
+}
+
+.social-media-container{
+	&__icons-container{
+		display: flex;
+		gap: 1.6rem;
+		justify-content: center;
+		align-items: center;
+		margin-block-start: 2.4rem;
+	}
+
+	&__icons {
+		width: 2.8rem;
+		color: $grey;
+	}
+
+	&__platzi:hover {
+		color: $green-platzi;
+	}
+
+	&__youtube:hover {
+		color: $red-youtube;
+	}
+
+	&__github:hover {
+		color: $purple-github;
+	}
+
+	&__instagram:hover {
+		color: $pink-instagram;
+	}
+
+	&__twitter:hover {
+		color: $blue-twitter;
+	}
+
+	&__linkedin:hover {
+		color: $blue-linkedin;
+	}
+
+	&__twitch:hover {
+		color: $violet-twitch;
+	}
+
+	&__discord:hover {
+		color: $violet-discord;
+	}
+}

@@ -1,0 +1,44 @@
+.interesting-links-container {
+	&__links {
+		display: flex;
+		justify-content: space-between;
+		padding-block: 2rem;
+		padding-inline: 1.6rem;
+		font-weight: bold;
+	}
+
+	&__links:last-child {
+		border-bottom-left-radius: 1.6rem;
+		border-bottom-right-radius: 1.6rem;
+	}
+
+	&__link-website {
+		background-color: $lime-200;
+		color: $lime-600;
+	}
+
+	// &__link-blog {
+	// 	background-color: $yellow-200;
+	// 	color: $yellow-800;
+	// }
+
+	// &__link-podcast {
+	// 	background-color: $blue-200;
+	// 	color: $blue-600;
+	// }
+
+	// &__link-courses{
+	// 	background-color: $lime-200;
+	// 	color: $lime-600;
+	// }
+
+	&__link-sponsors {
+		background-color: $rose-200;
+		color: $rose-600;
+	}
+
+	&__link-special-price-platzi {
+		background-color: $sky-200;
+		color: $sky-600;
+	}
+}
