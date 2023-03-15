@@ -24,6 +24,7 @@
 	},
 	"homepage": "https://github.com/GaleedGutierrez/Curso-de-Introduccion-a-Empaquetadores-Web#readme",
 	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^5.55.0",
 		"eslint": "^8.36.0",
 		"pug-cli2": "^1.0.0-alpha6.1",
 		"stylelint": "^15.2.0",

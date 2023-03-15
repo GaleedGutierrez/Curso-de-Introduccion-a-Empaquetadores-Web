@@ -25,5 +25,5 @@
         "instagram",
         "linkedin"
     ],
-	"stylelint.validate": ["css", "scss"]
+	"stylelint.validate": ["css", "scss"],
 }

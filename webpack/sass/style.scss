@@ -5,14 +5,13 @@
 @import "./components/social-media";
 @import "./components/insteresting-links";
 
-
 .main {
 	padding-inline: 1rem;
 	margin-block-start: 1rem;
 }
 
 .main__card-container {
-	max-width: 52rem;
+	max-width: 44.4rem;
 	border-radius: 1.6rem;
 	margin-inline: auto;
 	background-color: $white;
