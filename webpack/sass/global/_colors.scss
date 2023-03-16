@@ -1,14 +1,37 @@
 // Hexadecimal
-
+$primary-color: #00172A;
+$white: #f8f7f7;
+$soft-grey: #94a3bb;
+$grey: #6B7280;
+$green-platzi: #98CA3F;
+$red-youtube: #F00;
+$purple-github: #6e5494;
+$pink-instagram: #E4405F;
+$blue-twitter: #93c5fd;
+$blue-linkedin: #3b82f6;
+$violet-twitch: #5b21b6;
+$violet-discord: #a78bfa;
+$fuchsia-200: #f5d0fe;
+$fuchsia-800: #86198f;
+$yellow-200: #fef08a;
+$yellow-800: #854d0e;
+$blue-200: #bfdbfe;
+$blue-600: #2563eb;
+$lime-200: #d9f99d;
+$lime-600: #65a30d;
+$rose-200: #fecdd3;
+$rose-600: #e11d48;
+$sky-200: #bae6fd;
+$sky-600: #0284c7;
 
 body {
-	background-color: $purple-light-1;
-	color: $purple-dark-2;
+	background-color: $primary-color;
+	color: $primary-color;
 }
 
-p {
-	color: $purple-dark-2;
-}
+// p {
+// 	color: $primary-color;
+// }
 
 a {
 	color: inherit;

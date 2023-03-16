@@ -1,99 +1,20 @@
-@import "./global/icons-google";
 @import "./global/reset-styles";
 @import "./global/global-styles";
-@import "./global/skeletons";
-@import "./header/header";
-@import "./footer/footer";
-@import "./trends/trends";
-@import "./trends/carousel/carousel";
-@import "./categories/categories";
-@import "./details-movie/details-movie";
-@import "./similar-movies/similar-movies";
-@import "./generic-list/generic-list";
-@import "./buttons/buttons";
-@import "./favorite/favorite";
+@import "./components/footer";
+@import "./components/resume";
+@import "./components/social-media";
+@import "./components/insteresting-links";
 
-.hidden {
-	display: none;
+.main {
+	padding-inline: 1rem;
+	margin-block-start: 1rem;
 }
 
-.languages-container__button {
-	width: 3.2rem;
-	height: 3.2rem;
-	padding: 0.4rem;
-	border: 0.1rem solid $purple-dark-2;
-	border-radius: 0.4rem;
-	font-weight: bold;
-
-	&:hover {
-		border-color: $soft-purple;
-		background-color: $purple-light-1;
-		color: $soft-purple;
-	}
-
-	&:active {
-		border-color: $purple-medium-1;
-		background-color: $purple-medium-1;
-		color: $purple-light-1;
-	}
-}
-
-.languages-container__form-button-container {
-	position: absolute;
-	top: 10rem;
-	z-index: 1;
-	display: none;
-	width: 95%;
-	padding: 1.6rem;
-	border-radius: 0.8rem;
-	background-color: $purple-light-2;
-}
-
-.languages-container__form-button-container--visible {
-	display: block;
-}
-
-.header__current-language-button {
-	display: flex;
-	gap: 0.4rem;
-	align-items: center;
-	padding: 1.2rem;
-	border-radius: 1.2rem;
-	margin-block: 1.6rem;
+.main__card-container {
+	max-width: 44.4rem;
+	border-radius: 1.6rem;
 	margin-inline: auto;
-	background-color: $purple-dark-2;
-	color: $purple-light-1;
-
-	@include font-small;
-
-	&:hover {
-		border-color: $soft-purple;
-		background-color: $purple-light-1;
-		color: $soft-purple;
-	}
-
-	&:active {
-		border-color: $purple-medium-1;
-		background-color: $purple-medium-1;
-		color: $purple-light-1;
-	}
+	background-color: $white;
 }
 
-.languages-container__input {
-	display: none;
-	width: 90%;
-	height: 3.4rem;
-	padding: 0.8rem;
-	border-radius: 0.8rem;
-	margin-inline: auto;
-	background-color: $soft-purple;
-	color: $purple-light-1;
 
-	&::placeholder {
-		color: $purple-light-1;
-	}
-}
-
-.languages-container__input--visible {
-	display: block;
-}
