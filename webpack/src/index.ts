@@ -1,3 +1,5 @@
+import '../sass/style.scss';
+
 const interestingLinks = () => {
 	const LINKS = DATA.links.map((link) => {
 		const { name, url, color, emoji } = link;
@@ -96,8 +98,8 @@ const DATA = {
 			emoji : '📖',
 		},
 		{
-			name  : 'Sponsors',
-			url   : 'mailto:galeedgutierrez@hotmail.com?Subject=Sponsor',
+			name  : 'Trabajemos juntos',
+			url   : 'mailto:galeedgutierrez@hotmail.com?Subject=Trabajemos juntos 🤝',
 			color : 'rose',
 			emoji : '🚀',
 		},
@@ -110,7 +112,6 @@ const DATA = {
 	],
 	footer : 'Made with ❤️ in Argentina 🇦🇷',
 };
-const NAME = document.createTextNode(DATA.name);
 const LINKS_CONTAINER = document.getElementById('links') as HTMLElement;
 const NAME_CONTAINER = document.querySelector('#name') as HTMLHeadElement;
 const SOCIAL_MEDIA_CONTAINER = document.querySelector('#social-media') as HTMLDivElement;
@@ -119,4 +120,4 @@ const FOOTER = document.querySelector('#footer') as HTMLElement;
 socialMedia();
 interestingLinks();
 footer();
-NAME_CONTAINER.appendChild(NAME);
+NAME_CONTAINER.innerHTML = DATA.name;

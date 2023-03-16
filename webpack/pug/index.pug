@@ -2,7 +2,7 @@ extend ./components/global/_global.pug
 block head
 	- const SEE_HEADER = false
 	- const SEE_FOOTER = true
-	+style-head("style.css")
+	link(rel="stylesheet", href="./main.css")
 	+titles("Galeed Gutierrez @galeedgutierrez")
 block main
 	main.main
@@ -70,6 +70,13 @@ block main
 				//- 	span 🎁
 
 block scripts
-	//- script(async src="https://www.googletagmanager.com/gtag/js?id=G-M8H4YB694S")
-	//- script(src="../dist/googleAnalytics.js")
-	script(src="../src/index.js")
+	script(async src="https://www.googletagmanager.com/gtag/js?id=G-M8H4YB694S")
+	script.
+		window.dataLayer = window.dataLayer || [];
+		function gtag () {
+			// eslint-disable-next-line prefer-rest-params
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', 'G-M8H4YB694S');
+	script(src="./main.js")
