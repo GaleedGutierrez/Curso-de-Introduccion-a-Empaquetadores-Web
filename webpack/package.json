@@ -4,27 +4,39 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"build-pug": "pug --watch ./pug --out ./public -P"
+		"build-pug": "pug --watch ./pug --out ./public -P",
+		"build": "NODE_ENV=production webpack --mode=production",
+		"build-ts": "cross-env NODE_ENV=production TS_NODE_PROJECT=\"tsconfig-for-webpack-config.json\" webpack",
+		"dev": "NODE_ENV=development webpack-dev-server --open --mode=development",
+		"deploy": "gh-page -d dist"
 	},
 	"author": "Galeed Gutierrez <galeedeveloper@gmail.com>",
-	"license": "MT",
+	"license": "MIT",
 	"devDependencies": {
+		"@babel/preset-env": "^7.20.2",
+		"@babel/preset-typescript": "^7.21.0",
+		"@tsconfig/recommended": "^1.0.2",
+		"@types/node": "^18.15.3",
+		"@types/webpack": "^5.28.0",
+		"gh-pages": "^5.0.0",
+		"mini-css-extract-plugin": "^2.7.3",
+		"sass": "^1.59.3",
+		"sass-loader": "^13.2.0",
 		"ts-loader": "^9.4.2",
+		"ts-node": "^10.9.1",
+		"tsconfig-paths": "^4.1.2",
+		"tslib": "^2.5.0",
 		"typescript": "^4.9.5",
 		"webpack": "^5.76.1",
-		"webpack-cli": "^5.0.1"
+		"webpack-cli": "^5.0.1",
+		"webpack-dev-server": "^4.12.0"
 	},
-	"type": "module",
 	"dependencies": {
-		"-": "^0.0.1",
 		"@babel/core": "^7.21.0",
 		"babel-loader": "^9.1.2",
 		"copy-webpack-plugin": "^11.0.0",
+		"cross-env": "^7.0.3",
 		"css-loader": "^6.7.3",
-		"D": "^1.0.0",
-		"html-webpack-plugin": "^5.5.0",
-		"pug-plugin": "^4.9.7",
-		"sass": "^1.59.2",
-		"sass-loader": "^13.2.0"
+		"html-webpack-plugin": "^5.5.0"
 	}
 }
