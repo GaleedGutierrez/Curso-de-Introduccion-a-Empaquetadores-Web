@@ -6,7 +6,7 @@
   "scripts": {
     "build": "esbuild src/index.tsx --bundle --minify --sourcemap --outfile=public/bundle.js",
 	"build:dev": "node esbuild.dev.js",
-	"start": "node esbuild.dev.js -w",
+	"start": "node esbuild.config.js -w",
 	"open": "wslview public/index.html"
   },
   "author": "Galeed Gutierrez <galeedeveloper@gmail.com>",
@@ -21,5 +21,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^5.0.2"
-  }
+  },
+  "type": "module"
 }
