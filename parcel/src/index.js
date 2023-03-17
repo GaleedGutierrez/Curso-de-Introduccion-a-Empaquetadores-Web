@@ -1,9 +1,6 @@
-import { InterfaceProduct } from './interface.mjs';
-
 const main = async () => {
-	const RESPONSE: Response = await fetch(API);
-	const PRODUCTS: InterfaceProduct[] = await RESPONSE.json();
-
+	const RESPONSE = await fetch(API);
+	const PRODUCTS = await RESPONSE.json();
 	const TEMPLATES = PRODUCTS?.map((product) => {
 		const { images, title, price } = product;
 		const TEMPLATE = `<article class="card">
@@ -16,7 +13,7 @@ const main = async () => {
 		return TEMPLATE;
 	});
 	const OUTPUT = TEMPLATES.join('');
-	const NEW_ITEM = document.createElement('section') as HTMLElement;
+	const NEW_ITEM = document.createElement('section');
 
 	NEW_ITEM.classList.add('items');
 	NEW_ITEM.innerHTML = OUTPUT;

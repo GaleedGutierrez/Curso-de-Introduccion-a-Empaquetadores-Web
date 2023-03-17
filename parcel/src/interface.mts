@@ -1,3 +1,14 @@
-const APP = document.getElementById('#app');
-const API = 'https://api.escuelajs.co/api/v1/products?offset=0&limit=10';
+export interface InterfaceProduct {
+	id: number;
+	title: string;
+	price: number;
+	description: string;
+	category: InterfaceCategory;
+	images: string[];
+}
 
+export interface InterfaceCategory {
+	id: number;
+	name: string;
+	image: string;
+}
