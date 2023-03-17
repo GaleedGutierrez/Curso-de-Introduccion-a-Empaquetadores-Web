@@ -4,16 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "web-dev-server --config web-dev-server.config.js",
+    "build": "rollup -c"
   },
   "keywords": [],
   "author": "Galeed Gutierrez <galeedeveloper@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@rollup/plugin-html": "^1.0.2",
-    "@rollup/plugin-image": "^3.0.2",
-    "rollup": "^3.19.1",
-    "rollup-plugin-copy": "^3.4.0",
-    "rollup-plugin-css-only": "^4.3.0"
-  }
+    "@rollup/plugin-html": "1.0.2",
+    "@rollup/plugin-image": "3.0.2",
+    "@rollup/plugin-typescript": "11.0.0",
+    "@web/dev-server": "0.1.36",
+    "rollup": "3.19.1",
+    "rollup-plugin-copy": "3.4.0",
+    "rollup-plugin-css-only": "4.3.0"
+  },
+  "type": "module"
 }
