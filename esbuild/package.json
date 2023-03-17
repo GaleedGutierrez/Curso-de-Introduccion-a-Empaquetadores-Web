@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "esbuild src/index.tsx --bundle --minify --sourcemap --outfile=public/bundle.js",
+	"build:dev": "node esbuild.dev.js",
+	"start": "node esbuild.dev.js -w",
+	"open": "wslview public/index.html"
   },
   "author": "Galeed Gutierrez <galeedeveloper@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "esbuild": "^0.17.11"
+    "esbuild": "^0.17.11",
+    "esbuild-serve": "^1.0.1"
   },
   "dependencies": {
     "@types/react": "^18.0.28",
