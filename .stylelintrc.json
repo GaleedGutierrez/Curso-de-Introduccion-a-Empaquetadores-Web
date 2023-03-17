@@ -193,6 +193,6 @@
 			"transform-style",
 			"transform-box"
 		],
-		"unit-allowed-list": ["rem", "%" , "ms", "deg", "vh", "vw", "fr", "em", "px"]
+		"unit-allowed-list": ["rem", "%" , "ms", "deg", "vh", "vw", "fr", "em", "px", "s"]
 	}
 }
