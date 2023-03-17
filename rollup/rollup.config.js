@@ -2,9 +2,10 @@ import html from '@rollup/plugin-html';
 import copy from 'rollup-plugin-copy';
 import css from 'rollup-plugin-css-only';
 import image from '@rollup/plugin-image';
+import typescript from '@rollup/plugin-typescript';
 
 export default {
-	input  : 'src/index.js',
+	input  : 'src/index.ts',
 	output : {
 		file      : 'dist/bundle.js',
 		format    : 'es',
@@ -24,5 +25,6 @@ export default {
 		}),
 		html(),
 		image(),
+		typescript(),
 	]
 };
