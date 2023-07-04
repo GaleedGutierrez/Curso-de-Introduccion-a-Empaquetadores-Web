@@ -6,8 +6,8 @@
 	"scripts": {
 		"build-pug": "pug --watch ./pug --out ./public -P",
 		"build": "NODE_ENV=production webpack --mode=production",
-		"build-ts": "cross-env NODE_ENV=production TS_NODE_PROJECT=\"tsconfig-for-webpack-config.json\" webpack",
-		"dev": "NODE_ENV=development webpack-dev-server --open --mode=development",
+		"build-ts": "cross-env NODE_ENV=production TS_NODE_PROJECT=\"tsconfig-for-webpack-config.json\" webpack --mode=production",
+		"dev": "cross-env TS_NODE_PROJECT=\"tsconfig-for-webpack-config.json\" webpack serve --config webpack.config.ts --mode=development",
 		"deploy": "gh-page -d dist"
 	},
 	"author": "Galeed Gutierrez <galeedeveloper@gmail.com>",
