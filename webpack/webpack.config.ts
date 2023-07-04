@@ -1,19 +1,28 @@
-import * as path from 'path';
-import * as webpack from 'webpack';
+import path from 'path';
+import { Configuration } from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import 'webpack-dev-server';
 
 const devMode = process.env.NODE_ENV !== 'production';
 
-const config: webpack.Configuration = {
+const config: Configuration = {
 	entry  : './src/index.ts',
 	output : {
 		path     : path.resolve(__dirname, 'dist'),
 		filename : 'main.js'
 	},
 	resolve : {
-		extensions : ['.ts'],
+		extensions : [ '.ts', '.js' ],
+	},
+	devServer : {
+		static             : path.join(__dirname, 'dist'),
+		compress           : true,
+		port               : 8081,
+		historyApiFallback : true,
+		// devMiddleware      : {
+		// 	writeToDisk : true
+		// },
 	},
 	module : {
 		rules : [
@@ -30,9 +39,7 @@ const config: webpack.Configuration = {
 			{
 				test : /\.scss?$/i,
 				use  : [
-					devMode
-						? 'style-loader'
-						: MiniCssExtractPlugin.loader,
+					MiniCssExtractPlugin.loader,
 					'css-loader',
 					'sass-loader',
 				]
@@ -49,8 +56,9 @@ const config: webpack.Configuration = {
 	plugins : [
 		new HtmlWebpackPlugin({
 			inject   : true,
-			template : './public/index.html',
-			filename : './index.html'
+			title    : 'My Card Presentation',
+			template : 'public/index.html',
+			filename : 'index.html'
 		}),
 		new MiniCssExtractPlugin(),
 	]
